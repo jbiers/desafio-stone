@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Desafio Stone' });
+  res.render('index', { title: 'Stone' });
 });
 
 module.exports = router;
