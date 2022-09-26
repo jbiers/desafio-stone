@@ -39,6 +39,6 @@ resource "aws_instance" "hello-stone" {
     }
 
     provisioner "local-exec" {
-      command = "ansible-playbook -i ${aws_instance.hello-stone.public_ip}, --private-key ${"~/key.pem"} docker.yaml"
+      command = "ansible-playbook -i ${aws_instance.hello-stone.public_ip}, --private-key ${"~/key.pem"} setup.yaml"
     }
 }

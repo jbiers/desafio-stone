@@ -1,0 +1,5 @@
+- name: install docker-compose
+  get_url:
+    url: "https://github.com/docker/compose/releases/download/v2.11.1/docker-compose-linux-x86_64"
+    dest: /usr/local/bin/docker-compose
+    mode: u+x,g+x,o+x
