@@ -13,7 +13,7 @@ resource "aws_instance" "hello-stone" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
   associate_public_ip_address = true
-  key_name = "key"
+  key_name = var.aws_key_name
 
   tags = {
     Name = "hello-stone"
@@ -33,12 +33,12 @@ resource "aws_instance" "hello-stone" {
       connection {
         type = "ssh"
         user = "ubuntu"
-        private_key = file("~/key.pem")
+        private_key = file(var.aws_key_path)
         host = aws_instance.hello-stone.public_ip
       }
     }
 
     provisioner "local-exec" {
-      command = "ansible-playbook -i ${aws_instance.hello-stone.public_ip}, --private-key ${"~/key.pem"} setup.yaml"
+      command = "ansible-playbook -i ${aws_instance.hello-stone.public_ip}, --private-key ${var.aws_key_path} setup.yaml"
     }
 }
