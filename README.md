@@ -1,5 +1,7 @@
 # hello-stone
 
+Uma aplicação simples em NodeJS para testar conhecimentos de deploy com Docker, Terraform e Ansible.
+
 ## Como rodar o programa?
 
 ### Rodando localmente.
