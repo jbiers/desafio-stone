@@ -30,6 +30,11 @@ Uma aplicação simples em NodeJS para testar conhecimentos de deploy com Docker
   
   `docker-compose up`
   
-  Com os passos detalhados, já é possível ter a aplicação rodando localmente. Para subir a infraestrutura na AWS e configurá-la, entretanto, utilizei ainda o Terraform e o Ansible. Os arquivos com extensão .tf detalham a infraestrutura a ser provisionada, no caso uma instância do tipo EC2 t2.micro com endereço de IP público e três security groups. O grupo responsável pelas conexões do tipo SSH foi configurado de forma a permitir que apenas a máquina que criou a instância seja capaz de se conectar a ela via SSH, então esse é um ponto de atenção.
+  Com os passos detalhados, já é possível ter a aplicação rodando localmente. Para subir a infraestrutura na AWS e configurá-la, entretanto, utilizei ainda o Terraform e o Ansible. Os arquivos com extensão .tf detalham a infraestrutura a ser provisionada, no caso uma instância do tipo EC2 t2.micro com endereço de IP público e três security groups. O grupo responsável pelas conexões do tipo SSH foi configurado de forma a permitir que apenas a máquina que criou a instância seja capaz de se conectar a ela via SSH, então esse é um ponto de atenção. Assim, rodando os comandos abaixo e provendo as informações necessárias para conexão com sua conta na AWS, a instância será provisionada e configurada pelo Ansible.
+  
+  `terraform init`
+  `terraform apply`
+  
+  Para que o Ansible fosse executado assim que a instância finalizasse o processo de boot, utilizei dois provisioners do Terraform, o [local-exec] e [remote-exec], que permitem respectivamente a execução de código na máquina local e na instância. O [remote-exec] é necessário pois, por padrão, o [local-exec] não espera que a máquina remota seja bootada. O [remote-exec], por outro lado, espera, e ele é executado primeiro. Mais detalhes sobre essa escolha no artigo da Digital Ocean [aqui](https://www.digitalocean.com/community/tutorials/how-to-use-ansible-with-terraform-for-configuration-management)
   
   
