@@ -1,0 +1,23 @@
+- name: install nginx
+  apt:
+    name: nginx
+    state: latest
+  
+- name: make sure nginx has started
+  service:
+    name: nginx
+    state: started
+
+- name: copy template to nginx configuration folder
+  template:
+    src: "reverse-proxy.j2"
+    dest: "/etc/nginx/sites-available/default"
+
+- name: restart nginx
+  service:
+    name: nginx
+    state: restarted
+
+- name: run docker-compose up to have the app on port 8080
+  community.docker.docker_compose:
+    project_src: /home/ubuntu/desafio-stone/hello-stone

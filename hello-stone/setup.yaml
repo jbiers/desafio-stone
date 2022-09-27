@@ -4,4 +4,13 @@
   become: yes
 
   roles:
+  - docker
+  - docker-compose
   - app
+  - nginx
+# run docker-compose up at the end of nginx
+
+## install nginx
+## configure nginx with template to point from 80 to 8080
+## run docker-compose up
+## clean up the code (avoid hard-coded stuff)

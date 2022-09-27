@@ -27,7 +27,13 @@
     name: [
       "docker-ce",
       "docker-ce-cli",
-      "containerd.io"
+      "containerd.io",
+      "docker-compose"
     ]
     update_cache: yes
+
+- name: install python docker
+  apt: 
+    name: python3-docker 
+    state: latest
 
