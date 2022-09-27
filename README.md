@@ -14,7 +14,7 @@
 - possuir Terraform e Ansible instalados
 - também no diretório **desafio-stone/hello-stone**, executar **terraform init**.
 - em seguida, executar **terraform apply**
-- a aplicatção estará disponível por meio do endereço exibido no terminal ao final da execução do Terraform.
+- a aplicação estará disponível no do endereço exibido no terminal ao final da execução do Terraform, através do protocolo HTTP.
 
 #### Detalhamento do processo.
 
