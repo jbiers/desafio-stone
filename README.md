@@ -35,6 +35,6 @@ Uma aplicação simples em NodeJS para testar conhecimentos de deploy com Docker
   `terraform init`
   `terraform apply`
   
-  Para que o Ansible fosse executado assim que a instância finalizasse o processo de boot, utilizei dois provisioners do Terraform, o [local-exec] e [remote-exec], que permitem respectivamente a execução de código na máquina local e na instância. O [remote-exec] é necessário pois, por padrão, o [local-exec] não espera que a máquina remota seja bootada. O [remote-exec], por outro lado, espera, e ele é executado primeiro. Mais detalhes sobre essa escolha no artigo da Digital Ocean [aqui](https://www.digitalocean.com/community/tutorials/how-to-use-ansible-with-terraform-for-configuration-management)
+  Para que o Ansible fosse executado assim que a instância finalizasse o processo de boot, utilizei dois provisioners do Terraform, o [local-exec] e [remote-exec], que permitem respectivamente a execução de código na máquina local e na instância. O [remote-exec] é necessário pois, por padrão, o [local-exec] não espera que a máquina remota seja bootada. O [remote-exec], por outro lado, espera, e ele é executado primeiro. Mais detalhes sobre essa escolha no artigo da Digital Ocean [aqui](https://www.digitalocean.com/community/tutorials/how-to-use-ansible-with-terraform-for-configuration-management).
   
   
