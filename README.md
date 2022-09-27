@@ -13,7 +13,7 @@
 ### Rodando na AWS.
 - possuir Terraform e Ansible instalados
 - também no diretório **desafio-stone/hello-stone**, executar **terraform init**.
-- em seguida, executar **terraform apply*
+- em seguida, executar **terraform apply**
 - a aplicatção estará disponível por meio do endereço exibido no terminal ao final da execução do Terraform.
 
 #### Detalhamento do processo.
