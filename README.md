@@ -3,6 +3,10 @@
 ## Como rodar o programa?
 
 ### Rodando localmente.
+- ter o docker e docker-compose instalados.
+- após clonar o repositório, navegue para a pasta *desafio-stone/hello-stone*
+- execute o comando **docker-compose up**
+- a aplicação estará disponível em localhost:8080
 
 #### Detalhamento do processo.
 
