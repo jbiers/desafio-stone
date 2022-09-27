@@ -10,15 +10,13 @@ Uma aplicação simples em NodeJS para testar conhecimentos de deploy com Docker
 - execute o comando **docker-compose up**
 - a aplicação estará disponível em localhost:8080
 
-#### Detalhamento do processo.
-
 ### Rodando na AWS.
 - possuir Terraform e Ansible instalados
 - também no diretório **desafio-stone/hello-stone**, executar **terraform init**.
 - em seguida, executar **terraform apply**
 - a aplicação estará disponível no do endereço exibido no terminal ao final da execução do Terraform, através do protocolo HTTP.
 
-#### Detalhamento do processo.
+## Detalhamento do processo de desenvolvimento.
 
 you need permissions
 
