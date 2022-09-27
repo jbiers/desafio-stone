@@ -1,4 +1,14 @@
-# hello-stone-app
+# hello-stone
+
+## Como rodar o programa?
+
+### Rodando localmente.
+
+#### Detalhamento do processo.
+
+### Rodando na AWS.
+
+#### Detalhamento do processo.
 
 you need permissions
 
